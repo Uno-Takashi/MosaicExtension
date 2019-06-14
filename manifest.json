@@ -1,0 +1,18 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Web Mosaic",
+  "description": "ウェブページの選択した部分をモザイクにするためのChrome Extension",
+  "version": "0.1",
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+          {
+                "matches": ["<all_urls>"],
+               "js": ["js/jquery-3.3.1.js","js/spoiler/spoiler.js", "js/content.js"]
+          }
+     ],
+  "permissions": ["contextMenus", "<all_urls>","contextMenus","activeTab"],
+  "manifest_version": 2
+}
